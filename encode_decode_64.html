@@ -55,28 +55,27 @@ layout: default
 <div class="container text-center">
   <h1>Encode64 / Decode64</h1>
   <p>The purpose is to have a browser only decode/encode mechanism without sending any data to a distant server</p>
-  <p>The code is available here : </p>
+  <p>The code is available : <a href="{{ site.github.repository_url }}/blob/master/encode_decode_64.html">HERE</a></p>
   <p>The encoding / decoding it done by the btoa() and atob() native javascript function</p>
   <div>
-    <textarea id="input_string" name="input_string" rows="10" cols="80" autofocus="true" placeholder="Put your encoded or decoded string here">
-    </textarea>
+    <textarea id="input_string" name="input_string" rows="10" cols="80" autofocus="true" placeholder="Put your encoded or decoded string here"></textarea>
   </div>
   <div>
-    <div style="margin: 17px 0px;">
-      <span id="encode64" class="button">Encode the UTF-8 input into base 64</span>
-      <span id="encode64x2" class="button">Encode the UTF-8 input into base 64, twice</span>
+    <div style="margin: 17px 0;">
+      <span id="encode64" class="button encode">Encode message into base64</span>
+      <span id="encode64x2" class="button encode2">Encode message twice into base64</span>
     </div>
-    <div style="margin: 17px 0px;">
-      <span id="decode64" class="button">Decode the UTF-8 base64 input</span>
-      <span id="decode64x2" class="button">Decode the UTF-8 base64 input twice</span>
+    <div style="margin: 17px 0;">
+      <span id="decode64" class="button decode">Decode base64 message</span>
+      <span id="decode64x2" class="button decode2">Decode twice base64 message</span>
     </div>
   </div>
 
   <div style="margin-top: 22px;">
     <textarea id="output_string" name="output_string" rows="10" cols="80" readonly="true">
     </textarea>
-    <div>
-      <span id="copyButton" class="button" onclick="copy_output();">Click to copy</span>
+    <div style="margin-top: 17px;">
+      <span id="copyButton" class="button">Click to copy</span>
     </div>
   </div>
 </div>
