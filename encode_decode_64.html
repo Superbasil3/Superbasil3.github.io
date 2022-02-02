@@ -24,14 +24,14 @@ layout: default
       const input_string = document.getElementById("input_string").value
       const decoded_input = atob(input_string)
       console.log("decode64 of input_string " + decoded_input)
-      document.getElementById("output_string").value = encoded_input
+      document.getElementById("output_string").value = decoded_input
     }
 
     document.getElementById("decode64x2").onclick = function () {
       const input_string = document.getElementById("input_string").value
-      const encoded_input = atob(atob(input_string))
+      const decoded_input = atob(atob(input_string))
       console.log("decode64x2 of input_string " + encoded_input)
-      document.getElementById("output_string").value = encoded_input
+      document.getElementById("output_string").value = decoded_input
     }
 
     document.getElementById("copyButton").onclick = function () {
@@ -62,15 +62,21 @@ layout: default
     </textarea>
   </div>
   <div>
-    <span id="encode64" class="button">Encode the UTF-8 input into base 64</span>
-    <span id="encode64x2" class="buttononclick="encode64x2();">Encode the UTF-8 input into base 64, twice</span>
-    <span id="decode64" class="button onclick="decode64();">Decode the UTF-8 base64 input</span>
-    <span id="decode64x2" class="buttononclick="decode64x2();">Decode the UTF-8 base64 input twice</span>
+    <div style="margin: 17px 0px;">
+      <span id="encode64" class="button">Encode the UTF-8 input into base 64</span>
+      <span id="encode64x2" class="button">Encode the UTF-8 input into base 64, twice</span>
+    </div>
+    <div style="margin: 17px 0px;">
+      <span id="decode64" class="button">Decode the UTF-8 base64 input</span>
+      <span id="decode64x2" class="button">Decode the UTF-8 base64 input twice</span>
+    </div>
   </div>
 
-  <div>
+  <div style="margin-top: 22px;">
     <textarea id="output_string" name="output_string" rows="10" cols="80" readonly="true">
     </textarea>
-    <span id="copyButton" class="button" onclick="copy_output();">Click to copy</span>
+    <div>
+      <span id="copyButton" class="button" onclick="copy_output();">Click to copy</span>
+    </div>
   </div>
 </div>
