@@ -326,3 +326,18 @@ legend {
     color: inherit;
   }
 }
+
+span.button {
+  padding: 10px;
+  display: inline;
+  border-radius: 2px;
+  border: 0;
+  margin: 0 10px;
+  background: grey;
+  font-size: 15px;
+  line-height: 15px;
+  color: white;
+  width: auto;
+  height: auto;
+  box-sizing: content-box;
+}
