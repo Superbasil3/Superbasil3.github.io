@@ -1,7 +1,18 @@
 ---
 layout: page
-title: Bootstrap 4 Github Pages
+title: Superbasil3
 ---
+
+Personnal repo with some tries / projects / test to have them available from everywhere
+
+### Code Decode base64 information
+
+
+### PSC1 cheat page
+Some key things about the PC1 formation knowledge
+
+
+
 
 A [Bootstrap 4](https://getbootstrap.com/) start up project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
 

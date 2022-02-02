@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<script>
+  function encode64(){
+    const input_string = document.getElementById("input_string").value
+    const encoded_input = btoa(input_string)
+    console.log("Encode64 of input_string " + encoded_input)
+    document.getElementById("output_string").value = encoded_input
+  }
+
+  function encode64x2(){
+    const input_string = document.getElementById("input_string").value
+    const encoded_input = btoa(btoa(input_string))
+    console.log("encode64x2 of input_string " + encoded_input)
+    document.getElementById("output_string").value = encoded_input
+  }
+
+  function decode64(){
+    const input_string = document.getElementById("input_string").value
+    const decoded_input = atob(input_string)
+    console.log("decode64 of input_string " + decoded_input)
+    document.getElementById("output_string").value = encoded_input
+  }
+
+  function decode64x2(){
+    const input_string = document.getElementById("input_string").value
+    const encoded_input = atob(atob(input_string))
+    console.log("decode64x2 of input_string " + encoded_input)
+    document.getElementById("output_string").value = encoded_input
+  }
+
+  function copy_output(){
+    const textToCopy = document.getElementById("output_string").value;
+    if (!navigator.clipboard) {
+      return;
+    }
+    try {
+      navigator.clipboard.writeText(textToCopy);
+      document.getElementById('copyButton').innerText = 'Copied to clipboard';
+      setTimeout(function () {
+        document.getElementById('copyButton').innerText = 'Click to copy';
+      }, 1200);
+    } catch (err) {
+      console.error('Failed to copy!', err);
+    }
+  }
+
+</script>
+
+<div class="container text-center">
+  <h1>ENCODE_DECODE</h1>
+  <p>The purpose is to have a browser only decode/encode mechanism without sending any data to a distant server</p>
+  <form>
+    <textarea id="input_string" name="input_string" rows="4" cols="50" autofocus="true" placeholder="Put your encoded or decoded string here"/>
+
+    <button name="encode64" onclick="encode64();">Encode the UTF-8 input into base 64</button>
+    <button name="encode64x2" onclick="encode64x2();">Encode the UTF-8 input into base 64, twice</button>
+    <button name="decode64" onclick="decode64();">Decode the UTF-8 base64 input</button>
+    <button name="decode64x2" onclick="decode64x2();">Decode the UTF-8 base64 input twice</button>
+
+    <textarea id="output_string" name="output_string" rows="4" cols="50" readonly="true"/>
+    <button id="copyButton" onclick="copy_output();">Click to copy</button>
+
+  </form>
+</div>
