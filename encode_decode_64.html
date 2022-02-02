@@ -53,15 +53,14 @@ layout: default
   <h1>ENCODE_DECODE</h1>
   <p>The purpose is to have a browser only decode/encode mechanism without sending any data to a distant server</p>
   <form>
-    <textarea id="input_string" name="input_string" rows="4" cols="50" autofocus="true" placeholder="Put your encoded or decoded string here"/>
+    <textarea id="input_string" name="input_string" rows="10" cols="80" autofocus="true" placeholder="Put your encoded or decoded string here"></textarea>
 
     <button name="encode64" onclick="encode64();">Encode the UTF-8 input into base 64</button>
     <button name="encode64x2" onclick="encode64x2();">Encode the UTF-8 input into base 64, twice</button>
     <button name="decode64" onclick="decode64();">Decode the UTF-8 base64 input</button>
     <button name="decode64x2" onclick="decode64x2();">Decode the UTF-8 base64 input twice</button>
 
-    <textarea id="output_string" name="output_string" rows="4" cols="50" readonly="true"/>
+    <textarea id="output_string" name="output_string" rows="10" cols="80" readonly="true"></textarea>
     <button id="copyButton" onclick="copy_output();">Click to copy</button>
-
   </form>
 </div>
