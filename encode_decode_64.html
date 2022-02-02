@@ -3,12 +3,13 @@ layout: default
 ---
 
 <script>
-  function encode64(){
+
+  document.getElementById("encode64").onclick = function () {
     const input_string = document.getElementById("input_string").value
     const encoded_input = btoa(input_string)
     console.log("Encode64 of input_string " + encoded_input)
     document.getElementById("output_string").value = encoded_input
-  }
+  };
 
   function encode64x2(){
     const input_string = document.getElementById("input_string").value
@@ -59,10 +60,10 @@ layout: default
     </textarea>
   </div>
   <div>
-    <button name="encode64" onclick="encode64();">Encode the UTF-8 input into base 64</button>
-    <button name="encode64x2" onclick="encode64x2();">Encode the UTF-8 input into base 64, twice</button>
-    <button name="decode64" onclick="decode64();">Decode the UTF-8 base64 input</button>
-    <button name="decode64x2" onclick="decode64x2();">Decode the UTF-8 base64 input twice</button>
+    <span id="encode64" >Encode the UTF-8 input into base 64</span>
+    <button id="encode64x2" onclick="encode64x2();">Encode the UTF-8 input into base 64, twice</button>
+    <button id="decode64" onclick="decode64();">Decode the UTF-8 base64 input</button>
+    <button id="decode64x2" onclick="decode64x2();">Decode the UTF-8 base64 input twice</button>
   </div>
 
   <div>
